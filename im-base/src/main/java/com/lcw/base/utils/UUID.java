@@ -2,10 +2,6 @@ package com.lcw.base.utils;
 
 public final class UUID {
 
-    public static String randomUUID10() {
-        return RandomUtils.randomString(10).toLowerCase();
-    }
-
     public static String randomUUID() {
         return java.util.UUID.randomUUID().toString().replaceAll("-", "").toLowerCase();
     }
@@ -18,7 +14,4 @@ public final class UUID {
         return uuId.substring(0, length);
     }
 
-    public static String randomUserId() {
-        return randomUUID10();
-    }
 }

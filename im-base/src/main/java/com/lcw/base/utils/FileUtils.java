@@ -271,8 +271,4 @@ public class FileUtils extends org.apache.commons.io.FileUtils {
         }
     }
 
-    public static String generateFilePath(String fileType) {
-        String path = DateUtils.dateToString(new Date(), "yyyy" + FILE_SEPARATOR + "MM" + FILE_SEPARATOR + "dd");
-        return path + FILE_SEPARATOR + UUID.randomUUID() + "." + fileType;
-    }
 }
