@@ -15,10 +15,27 @@
 	<description>A Vue IM System With Spring Boot</description>
 
 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+
+		<!-- 已经升级 -->
+		<mysql.driver.version>5.1.41</mysql.driver.version>
+		<oracle.driver.version>10.2.0.4.0</oracle.driver.version>
+		<druid.version>1.0.29</druid.version>
+
+		<commons-lang3.version>3.5</commons-lang3.version>
+		<commons-io.version>2.5</commons-io.version>
+		<commons-codec.version>1.10</commons-codec.version>
+
+		<ehcache.version>2.6.6</ehcache.version>
+		<shiro.version>1.4.0-RC2</shiro.version>
+
+		<activiti.version>5.22.0</activiti.version>
 	</properties>
 
 	<modules>
+		<module>im-base</module>
 		<module>im-server</module>
 	</modules>
 
@@ -60,8 +77,14 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<compilerVersion>${java.version}</compilerVersion>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
