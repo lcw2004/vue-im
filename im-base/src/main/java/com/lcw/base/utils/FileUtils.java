@@ -7,7 +7,7 @@ import java.awt.*;
 import java.io.*;
 import java.util.Date;
 
-public class FileUtils extends org.apache.commons.io.FileUtils {
+public class FileUtils extends org.apache.tomcat.util.http.fileupload.FileUtils {
 
     public static final int BUFF_SIZE = 1024 * 10;
     private static Logger logger = LoggerFactory.getLogger(FileUtils.class);

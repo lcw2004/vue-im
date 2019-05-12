@@ -3,7 +3,7 @@ package com.lcw.base.utils;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class IOUtils extends org.apache.commons.io.IOUtils {
+public class IOUtils extends org.apache.tomcat.util.http.fileupload.IOUtils {
 
     public static byte[] readFully(InputStream is) throws IOException {
         byte[] bytes = new byte[is.available()];
