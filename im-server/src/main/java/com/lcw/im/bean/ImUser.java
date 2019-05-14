@@ -7,11 +7,12 @@ import javax.persistence.*;
 public class ImUser {
 
     @Id
-    @GeneratedValue
     private String userId;
     private String userName;
     private String account;
     private String password;
+    private String avatar;
+    private String sign;
 
     public String getUserId() {
         return userId;
@@ -43,5 +44,21 @@ public class ImUser {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getSign() {
+        return sign;
+    }
+
+    public void setSign(String sign) {
+        this.sign = sign;
     }
 }

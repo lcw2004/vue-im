@@ -12,7 +12,6 @@ import java.util.List;
 @Service
 public class ImUserService extends CrudService<ImUserDao, ImUser, String> {
 
-
     @Autowired
     private ImUserDao imUserDao;
 

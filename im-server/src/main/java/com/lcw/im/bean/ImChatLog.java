@@ -12,47 +12,15 @@ import java.util.Date;
 @Table(name = "im_chat_log")
 public class ImChatLog {
 
-	/**
-	 * 记录ID
-	 */
 	@Id
-    @GeneratedValue
 	private String logId;
-
-	/**
-	 * 发送者ID
-	 */
 	private String senderId;
-
-	/**
-	 * 接收者ID
-	 */
 	private String targetId;
-
-	/**
-	 * 接受者类型
-	 */
 	private Integer targetType;
-
-	/**
-	 * 发送时间
-	 */
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
 	private Date time;
-
-	/**
-	 * 消息内容
-	 */
 	private String message;
-
-	/**
-	 * 消息类型
-	 */
 	private Integer messageType;
-
-	/**
-	 * 状态
-	 */
 	private Integer status;
 
     public String getLogId () {

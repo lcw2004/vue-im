@@ -14,4 +14,8 @@ public final class UUID {
         return uuId.substring(0, length);
     }
 
+    public static String randomUUID10() {
+        return RandomUtils.randomNumberString(10);
+    }
+
 }

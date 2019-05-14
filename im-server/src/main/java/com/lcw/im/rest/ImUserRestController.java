@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/api/im")
-@Api(description = "IM")
-public class ImRestController {
+@RequestMapping(value = "/api/im/user")
+@Api(description = "IM用户")
+public class ImUserRestController {
 
     @Autowired
     private ImUserService imUserService;
 
-    @GetMapping("/init")
+    @GetMapping("")
     @ApiOperation(value = "初始化")
-    public ResponseMessage init() {
-        return Result.success(imUserService.getAll());
+    public ResponseMessage list() {
+        return Result.success(imUserService.findAll());
     }
 
 }

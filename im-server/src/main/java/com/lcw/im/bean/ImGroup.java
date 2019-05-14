@@ -9,32 +9,12 @@ import javax.persistence.*;
 @Table(name = "im_group")
 public class ImGroup {
 
-	/**
-	 * 群ID
-	 */
 	@Id
-    @GeneratedValue
 	private String groupId;
-
-	/**
-	 * 群名字
-	 */
+    private String userId;
 	private String groupName;
-
-	/**
-	 * 群头像
-	 */
 	private String avatar;
-
-	/**
-	 * 群公告
-	 */
 	private String notice;
-
-	/**
-	 * 用户ID
-	 */
-	private String userId;
 
     public String getGroupId () {
         return this.groupId;
